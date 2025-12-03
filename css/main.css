@@ -1,0 +1,15 @@
+:root{
+  --accent:#ff007f;
+  --bg:#ffffff;
+  --text:#222;
+  --radius:16px;
+  --shadow:0 4px 20px rgba(0,0,0,.08);
+  transition:background .3s,color .3s;
+}
+@media (prefers-color-scheme:dark){:root{--bg:#121212;--text:#eee;}}
+body{background:var(--bg);color:var(--text);}
+.grid{display:grid;gap:1.5rem;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));}
+.card{background:var(--bg);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden;transform:scale(1);transition:transform .2s;}
+.card:hover{transform:scale(1.02);}
+.skeleton{animation:pulse 1.2s infinite;background:#ddd;}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
