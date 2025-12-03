@@ -1,0 +1,11 @@
+<!doctype html>
+<html lang="ru"><head>…</head><body>
+<header class="top-bar"><button onclick="history.back()">←</button></header>
+<article id="product" class="product-page"></article>
+<script type="module">
+  import {getProduct} from './js/api.js';
+  import {renderProduct} from './js/ui.js';
+  getProduct(new URLSearchParams(location.search).get('id'))
+     .then(renderProduct);
+</script>
+</body></html>
