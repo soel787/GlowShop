@@ -1,0 +1,6 @@
+html.dark{
+  --bg:#121212;
+  --text:#eee;
+  --card:#1e1e1e;
+  --shadow:0 4px 20px rgba(0,0,0,.4);
+}
