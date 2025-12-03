@@ -1,20 +1,28 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Glow Shop</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Glow Shop – модная одежда</title>
+  <link rel="stylesheet" href="css/main.css"/>
+  <link rel="stylesheet" href="css/dark.css" id="dark"/>
+  <link rel="manifest" href="data:application/json,{&quot;name&quot;:&quot;Glow Shop&quot;,&quot;short_name&quot;:&quot;Glow&quot;,&quot;display&quot;:&quot;standalone&quot;}"/>
 </head>
 <body>
-  <header>
-    <h1>✨ Glow Shop</h1>
-    <p>Модная одежда с доставкой по всей России</p>
+  <header class="top-bar">
+    <h1 class="logo">✨ Glow Shop</h1>
+    <div class="actions">
+      <button class="theme-toggle" aria-label="Тема">🌓</button>
+      <a class="cart-link" href="cart.html">
+        <span class="icon">🛒</span>
+        <span class="badge" id="cart-count">0</span>
+      </a>
+    </div>
   </header>
 
-  <main id="catalog"></main>
+  <main id="catalog" class="grid"><!-- скелетон загрузки --></main>
 
-  <script src="config.js"></script>
-  <script src="script.js"></script>
+  <script src="js/api.js" type="module"></script>
+  <script src="js/ui.js" type="module"></script>
 </body>
 </html>
